@@ -5807,10 +5807,6 @@ figcaption {
     grid-column-end: 2;
   }
 }
-a[href^="http"]:link {
-  color: blue;
-}
-
 
 @media screen and (max-width: 767px) {
   #w-node-d783a17e-0b35-a13a-0448-a852d0df4a36-d0df4a24 {
