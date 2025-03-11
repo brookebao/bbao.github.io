@@ -793,6 +793,7 @@ textarea.w-input, textarea.w-select {
   width: 100%;
 }
 
+
 .w-hidden-main {
   display: none !important;
 }
@@ -4670,6 +4671,29 @@ figcaption {
   display: flex;
   position: absolute;
 }
+.div-block-54 {
+  position: relative;
+}
+
+.div-block-54 .text-wrapper {
+  opacity: 0;             /* Hide the text initially */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  position: absolute;     /* Position text over the image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;            /* Ensure text is visible on your image */
+  background: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent background */
+}
+
+.div-block-54:hover .text-wrapper {
+  opacity: 1;             /* Show the text on hover */
+}
+
 
 .text-block-8 {
   color: #fff;
@@ -4681,11 +4705,45 @@ figcaption {
 .div-block-55 {
   position: relative;
 }
+.div-block-55 .text-wrapper {
+  opacity: 0;             /* Hide the text initially */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  position: absolute;     /* Position text over the image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;            /* Ensure text is visible on your image */
+  background: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent background */
+}
+.div-block-55:hover .text-wrapper {
+  opacity: 1;             /* Show the text on hover */
+}
 
 .div-block-56 {
   width: 100%;
   height: 100%;
   position: relative;
+}
+.div-block-56 .text-wrapper {
+  opacity: 0;             /* Hide the text initially */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  position: absolute;     /* Position text over the image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;            /* Ensure text is visible on your image */
+  background: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent background */
+}
+.div-block-56:hover .text-wrapper {
+  opacity: 1;             /* Show the text on hover */
 }
 
 .heading-2 {
