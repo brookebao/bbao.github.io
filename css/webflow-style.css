@@ -3746,7 +3746,7 @@ figcaption {
 
 .container-6 {
   max-width: none;
-  margin-top: 40px;
+  margin-top: 5px;
   position: relative;
 }
 
@@ -3899,11 +3899,11 @@ figcaption {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 16%;
+  width: 22%;
   display: flex;
   position: absolute;
-  top: 5%;
-  left: 17%;
+  top: 10%;
+  left: 12%;
 }
 
 .image-2 {
