@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add event listeners for each button
     btnProjects.addEventListener("click", function () {
-        toggleFilter("project-item");
+        toggleFilter("proj-item");
     });
 
     btnArts.addEventListener("click", function () {

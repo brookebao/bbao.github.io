@@ -12,3 +12,70 @@
     transform: rotate(5deg);
     border: 0px solid transparent;
 }
+/* New grid container */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Update project-buttons */
+.project-buttons {
+  outline-offset: 0px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  mix-blend-mode: darken;
+  border: 7px solid #413222;
+  border-right-width: 9px;
+  border-radius: 7px;
+  outline: 3px #1a1b1f;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  transform: translate(0);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, .2);
+  transition: all 0.3s ease;
+}
+
+.project-buttons:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  transform: scale(1.05);
+}
+
+/* Keep your grayed-out effect */
+.project-buttons.grayed-out {
+  opacity: 0.3;
+  filter: grayscale(100%);
+  pointer-events: none;
+  transition: opacity 0.4s ease, filter 0.4s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
