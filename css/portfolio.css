@@ -12,15 +12,17 @@
     transform: rotate(5deg);
     border: 0px solid transparent;
 }
+
 /* New grid container */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, max-content));
   gap: 20px;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px;
-  width: 100%;
+  justify-content: center;
+}
+
+.div-block-27 {
+  padding: 40px 24px;
 }
 
 /* Update project-buttons */
