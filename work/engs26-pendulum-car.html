@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html
+  data-wf-page="65fa16bed91154548960b8d8"
+  data-wf-site="65fa16bed91154548960b83b"
+  lang="en"
+  data-wf-locale="en"
+>
+<head>
+  <meta charset="utf-8" />
+  <title>Feedback-Controlled Pendulum Car (ENGS 26)</title>
+  <meta content="Feedback-Controlled Pendulum Car (ENGS 26)" property="og:title" />
+  <meta content="Feedback-Controlled Pendulum Car (ENGS 26)" property="twitter:title" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="Webflow" name="generator" />
+
+  <!-- MUST MATCH ENGS 24 -->
+  <link href="../css/webflow-style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="../work/css/engs26-pendulum-car.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:100,200,300,400,500,600,700,800,900"]
+      }
+    });
+  </script>
+</head>
+
+<body>
+
+<!-- NAVIGATION (IDENTICAL) -->
+<div class="navigation w-nav">
+  <div class="navigation-items">
+    <a href="/" class="logo-link w-nav-brand">
+      <img src="/images/logo.png" width="104" alt="" class="logo-image" />
+    </a>
+    <div class="navigation-wrap">
+      <nav class="navigation-items w-nav-menu">
+        <a href="/" class="navigation-item w-nav-link">Home</a>
+        <a href="/about.html" class="navigation-item w-nav-link">About</a>
+        <a href="/portfolio.html" class="navigation-item w-nav-link">Portfolio</a>
+      </nav>
+      <div class="menu-button w-nav-button">
+        <img src="../images/menu-icon.png" width="22" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="div-block-22 project-hero">
+  <h2 class="heading-jumbo">
+    Feedback-Controlled Inverted Pendulum Car
+  </h2>
+
+  <h6 class="heading-4">
+    ENGS 26: Control Theory · Final Project
+  </h6>
+
+  <div class="text-block-5">
+    System Modeling · PID Control · MATLAB · Hardware Validation
+  </div>
+
+  <div class="section-nav">
+    <a href="#overview">Overview</a>
+    <a href="#modeling">System Modeling</a>
+    <a href="#measurements">Measurements</a>
+    <a href="#control">Control Design</a>
+    <a href="#implementation">Implementation</a>
+    <a href="#results">Results</a>
+    <a href="#deliverables">Deliverables</a>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<div class="project-section" id="overview">
+  <div class="position-name-text">Project Overview</div>
+  <p>
+    This project aimed to design and implement a closed-loop feedback controller
+    capable of stabilizing an inverted pendulum mounted on a motor-driven cart.
+    The inverted pendulum is an inherently unstable system, requiring active
+    control to maintain equilibrium.
+  </p>
+  <p>
+    Using first-principles modeling, experimental system identification, and
+    frequency-domain control design, we developed and tuned a PID-based
+    compensator that successfully stabilizes the pendulum under real-world
+    disturbances.
+  </p>
+</div>
+
+<!-- SYSTEM MODELING -->
+<div class="project-section" id="modeling">
+  <div class="position-name-text">System Modeling</div>
+  <p>
+    The system was modeled as a feedback loop consisting of a compensator, motor,
+    drivetrain, cart–pendulum dynamics, and angular position sensor. Equations of
+    motion for the cart–pendulum system were derived from Newtonian mechanics and
+    linearized about the upright equilibrium.
+  </p>
+  <p>
+    These equations were transformed into the Laplace domain to obtain the plant
+    transfer function relating motor voltage input to pendulum angle output.
+  </p>
+</div>
+
+<!-- MEASUREMENTS -->
+<div class="project-section" id="measurements">
+  <div class="position-name-text">Experimental Measurements</div>
+  <ul>
+    <li>Motor electrical response modeled as a first-order system</li>
+    <li>Motor torque constant extracted from manufacturer data</li>
+    <li>Gear ratio determined by tooth counting</li>
+    <li>Wheel radius measured to relate torque to force</li>
+    <li>Sensor voltage-to-angle calibration performed experimentally</li>
+  </ul>
+</div>
+
+<!-- CONTROL DESIGN -->
+<div class="project-section" id="control">
+  <div class="position-name-text">Control Design & Specifications</div>
+  <ul>
+    <li>Damping ratio &gt; 0.5</li>
+    <li>Rise time &lt; 0.5 s</li>
+    <li>Settling time &lt; 1.0 s</li>
+    <li>Overshoot &lt; 10%</li>
+    <li>Zero steady-state error</li>
+    <li>Minimum phase margin of 30°</li>
+    <li>Gain margin &gt; 6 dB (target)</li>
+  </ul>
+  <p>
+    A PID controller was selected due to its ability to balance responsiveness,
+    stability, and steady-state accuracy.
+  </p>
+</div>
+
+<!-- IMPLEMENTATION -->
+<div class="project-section" id="implementation">
+  <div class="position-name-text">Controller Implementation</div>
+  <p>
+    An ideal compensator was first designed in MATLAB using SISOTOOL and validated
+    through root locus, Bode, and Nyquist analyses. Component values were then
+    translated into a physical analog circuit using resistors and capacitors.
+  </p>
+  <p>
+    Empirical tuning was required to account for non-idealities such as actuator
+    saturation, friction, and unmodeled dynamics.
+  </p>
+</div>
+
+<!-- RESULTS -->
+<div class="project-section" id="results">
+  <div class="position-name-text">Results & Performance</div>
+  <p>
+    The final controller successfully stabilized the inverted pendulum in
+    hardware. The system demonstrated fast response, minimal overshoot, and
+    robust recovery from disturbances.
+  </p>
+  <p>
+    Frequency-domain analysis confirmed adequate phase margin and closed-loop
+    bandwidth, while time-domain testing validated real-world performance.
+  </p>
+</div>
+
+<!-- DELIVERABLES -->
+<div class="project-section" id="deliverables">
+  <div class="position-name-text">Deliverables</div>
+  <div class="deliverables-grid">
+
+    <a href="https://drive.google.com/file/d/1nwWHRCuWih1hGScDCCsvK-74fBrkBTv3/view?usp=sharing" target="_blank" class="deliverable-card">
+      <img src="/images/engs26/report_thumbnail.png" alt="Report thumbnail">
+      <div class="deliverable-label">Final Report (PDF)</div>
+    </a>
+
+    <a href="LINK_TO_PRESENTATION" target="_blank" class="deliverable-card">
+      <img src="/images/engs26/slides_thumbnail.png" alt="Slides thumbnail">
+      <div class="deliverable-label">Presentation Slides</div>
+    </a>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-wrap">
+  <div>
+    <a href="#" class="webflow-link w-inline-block">
+      <div class="paragraph-tiny">brookebao.com</div>
+    </a>
+  </div>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/brooke-bao/" target="_blank" class="footer-item">LinkedIn</a>
+  </div>
+</div>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/webflow-script.js"></script>
+
+</body>
+</html>
