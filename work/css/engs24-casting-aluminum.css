@@ -1,10 +1,10 @@
 
 .project-section {
   background: #f6f6f6;
-  padding: 35px 40px;
+  padding: 28px 32px;
   border-radius: 8px;
   max-width: 1000px;
-  margin: 30px auto;
+  margin: 22px auto;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
 }
 
@@ -55,7 +55,7 @@
 
 .full-width-image {
   width: 100%;
-  margin: 30px 0;
+  margin: 18px 0;
 }
 
 figure {
@@ -68,13 +68,42 @@ figcaption {
   margin-top: 8px;
 }
 
+/* ENGS24: microstructure images should be smaller + tighter */
+#microstructure .image-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#microstructure .image-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#microstructure figcaption {
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+  #microstructure .image-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  #microstructure .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 .experiment-layout {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: 32px;
-  margin-top: 25px;
+  margin-top: 18px;
   align-items: start;
 }
 .experiment-media-stack {
@@ -104,8 +133,13 @@ figcaption {
 }
 
 .experiment-block ul {
-  margin: 0;
+  margin: 2px 0 0;
   padding-left: 18px;
+}
+
+.experiment-block li {
+  margin: 0;
+  line-height: 1.2;
 }
 
 /* Right column video */
@@ -130,7 +164,7 @@ figcaption {
 
 .plot-wrapper {
   max-width: 650px;
-  margin: 30px auto;
+  margin: 18px auto;
 }
 
 .full-width-image {
@@ -183,7 +217,7 @@ figcaption {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
-  margin-top: 20px;
+  margin-top: 14px;
 }
 
 .deliverable-card {
@@ -220,7 +254,14 @@ figcaption {
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
-  margin: 25px auto 10px;
+  margin: 16px auto 8px;
+}
+
+@media (max-width: 768px) {
+  .project-section {
+    padding: 22px 22px;
+    margin: 16px auto;
+  }
 }
 
 .section-nav a {
@@ -237,4 +278,76 @@ figcaption {
 .section-nav a:hover {
   background: #ddd;
   transform: translateY(-1px);
+}
+
+/* Hero: heading + overview box */
+.project-hero-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.project-hero-text {
+  text-align: left;
+}
+
+.hero-overview-box {
+  background: #f6f6f6;
+  border-radius: 8px;
+  padding: 16px 16px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06);
+  text-align: left;
+}
+
+.hero-overview-box p {
+  margin: 10px 0 0;
+}
+
+.hero-overview-group + .hero-overview-group {
+  margin-top: 12px;
+}
+
+.hero-overview-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.hero-overview-list li {
+  margin: 6px 0;
+}
+
+@media (max-width: 900px) {
+  .project-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-hero-text {
+    text-align: center;
+  }
+}
+
+/* Place Microstructure + Cooling sections side-by-side */
+.two-col-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  max-width: 1100px;
+  margin: 22px auto;
+  padding: 0 16px;
+}
+
+.two-col-sections .project-section {
+  margin: 0;
+  max-width: none;
+}
+
+@media (max-width: 900px) {
+  .two-col-sections {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 16px auto;
+  }
 }
