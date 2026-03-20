@@ -224,6 +224,11 @@ figcaption {
   display: block;
 }
 
+.testing-setup-image {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 .experiment-media figcaption {
   font-size: 14px;
   color: #666;
@@ -527,6 +532,43 @@ figcaption {
   font-weight: 700;
 }
 
+.failure-point-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 0.75fr;
+  gap: 16px;
+  align-items: start;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.failure-point-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.failure-point-stack figure,
+.failure-point-main {
+  margin: 0;
+}
+
+.failure-point-stack img,
+.failure-point-main img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.failure-point-stack img {
+  max-height: 165px;
+  object-fit: contain;
+}
+
+.failure-point-main {
+  max-width: 320px;
+  justify-self: center;
+}
+
 body.lightbox-open {
   overflow: hidden;
 }
@@ -586,6 +628,12 @@ a:visited {
   }
   .results-metrics {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .failure-point-layout {
+    grid-template-columns: 1fr;
+  }
+  .failure-point-main {
+    max-width: 100%;
   }
   .final-analysis-row {
     grid-template-columns: 1fr;
