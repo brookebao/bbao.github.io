@@ -93,7 +93,7 @@
 
   </div>
 
-  <!--NAV--->
+  <!-- NAV -->
   <div class="section-nav">
     <a href="#overview">Overview</a>
     <a href="#ideation">Ideation</a>
@@ -162,7 +162,7 @@
         </figure>
         <figure>
           <img src="/images/engs33-bridge-project/phase1/phase1_bridge.png" alt="Bridge reference inspiration" />
-          <figcaption>Example of bridge that inspiration was drawn from <a href="https://www.historicenvironment.scot/advice-and-support/listing-scheduling-and-designations/world-heritage-sites/forth-bridge/" target="_blank"> (Forth Bridge)</a>.</figcaption>
+          <figcaption>Example bridge that inspired this design: <a href="https://www.historicenvironment.scot/advice-and-support/listing-scheduling-and-designations/world-heritage-sites/forth-bridge/" target="_blank" rel="noopener noreferrer">(Forth Bridge)</a>.</figcaption>
         </figure>
       </div>
 
@@ -197,7 +197,7 @@
           <p class="secondary-sap-caption">Final SAP model.</p>
         </figure>
         <figure>
-          <img src="/images/engs33-bridge-project/phase3/solidworks_comparisons.png" alt="Solidworks comparison" />
+          <img src="/images/engs33-bridge-project/phase3/solidworks_comparisons.png" alt="SolidWorks comparison" />
           <figcaption>Phase 3: SolidWorks variations with different wood widths and truss configurations. Comparisons were undertaken
                       with stress and deflection plots (not shown). Top: Variation made by Brooke. Bottom: Variation made by Ryan Stern.</figcaption>
         </figure>
@@ -229,7 +229,7 @@
         <div class="mini-card decision-card">
           <h4>Decision points</h4>
           <p> From the SAP 2000 2D analysis (Phase 2), to optimize these variables, a height of 130 mm, 5 different arches, and a k-truss configuration was chosen.</p>
-          <p> From the Solidworks FEA analysis (Phase 3), a thinner deck, 0.5 kg mass, 6 mm crossmember x 7, k-truss configuration among other changes was maintained for the final bridge design.</p>
+          <p> From the SolidWorks FEA analysis (Phase 3), a thinner deck, 0.5 kg mass, 6 mm crossmember × 7, and a K-truss configuration were maintained in the final bridge design.</p>
         </div>
       </div>
     </section>
@@ -253,7 +253,7 @@
             <img src="/images/engs33-bridge-project/finalbridge/views/bridge_bottomview.jpg" alt="Final bridge photo 4" />
           </figure>
         </div>
-        <p class="final-bridge-caption">Final bridge--all pieces laser cut, glued, and ready for testing!</p>
+        <p class="final-bridge-caption">Final bridge: all pieces laser-cut, glued, and ready for testing.</p>
 
         <div class="final-analysis-row">
           <figure>
@@ -267,10 +267,10 @@
           </figure>
         </div>
 
-        <p class="prediction-title"><strong>Things that we made predictions of:</strong></p>
+        <p class="prediction-title"><strong>Prediction targets:</strong></p>
         <ol class="prediction-bullets">
           <li>Load at failure</li>
-          <li>Total deflection between a load of 0.5 - 1 Newtons</li>
+          <li>Total deflection between loads of 0.5-1.0 N</li>
           <li>Point on bridge of first failure (cracking, buckling, etc.)</li>
         </ol>
 
@@ -287,9 +287,7 @@
             <strong>Test setup</strong>
             <p>
               The bridge was tested under a centered loading configuration using the
-              Instron. A increasing load is applied over time, with measurements being taken 
-              of force being applied and the deflection at that time. Loading is stopped when first
-              failure point occurs (usually marked with a cracking sound).
+              Instron. An increasing load is applied over time, with force and deflection measured continuously. Loading stops when the first failure point occurs (usually marked by a cracking sound).
             </p>
           </div>
         </div>
@@ -321,7 +319,7 @@
           <div class="performance-layout">
             <div class="plot-wrapper">
               <img class="full-width-image results-table-image" src="/images/engs33-bridge-project/results/resultstable.png" alt="Load deflection curve" />
-              <figcaption>Comparison of Solidworks predicted vs. actual maximum load and deflection.</figcaption>
+              <figcaption>Comparison of SolidWorks-predicted vs. actual maximum load and deflection.</figcaption>
             </div>
             <figure class="performance-note">
               <img src="/images/engs33-bridge-project/results/bridgeaftertesting.png" alt="Bridge after testing" />
@@ -340,12 +338,12 @@
               </figure>
               <figure>
                 <img src="/images/engs33-bridge-project/finalbridge/graphs/prediction_failurepoint_vonmises.png" alt="Predicted failure point von Mises plot" />
-                <figcaption>Point of highest stress is purple --- our predicted failure member at our predicted max. load (von Mises).</figcaption>
+                <figcaption>The highest-stress region (purple) indicates the predicted first-failure member (von Mises).</figcaption>
               </figure>
             </div>
             <figure class="failure-point-main">
               <img src="/images/engs33-bridge-project/results/actual_failurepoint.png" alt="Observed failure point on bridge" />
-              <figcaption>Observed failure point after physical load testing. Same exact member!!</figcaption>
+              <figcaption>Observed failure point after physical load testing: the same member failed first.</figcaption>
             </figure>
           </div>
         </div>
@@ -364,14 +362,14 @@
               <ul>
                 <li>Run smaller meshes when running FEA for more precise predictions.</li>
                 <li>Bridge may not have been flush with the Instron set up -- sanding support areas for better fit.</li>
-                <li>We were pretty conservative with identifying the moment of failure (and with that the maximum stress) in the von mises plot, could have been less conservative which would lead to larger maximum load like predicted</li>
+                <li>We were conservative when identifying the failure moment (and maximum stress) in the von Mises plot; a less conservative threshold could have predicted a higher maximum load.</li>
               </ul>
             </li>
             <li>
               If we had to try again...
               <ul>
-                <li>Test various fillet radii (bridge most likely failed there becuase the fillet radii made all those members very thing).</li>
-                <li>Our bridge was heavier than a lot of other bridges which could contribute to greater stress felt! Greater consideration of bridge mass vs. other features of design.</li>
+                <li>Test various fillet radii (the bridge likely failed there because the fillet radii made those members very thin).</li>
+                <li>Our bridge was heavier than many others, which likely increased stress; we would better balance bridge mass with other design features.</li>
               </ul>
             </li>
           </ul>
@@ -442,3 +440,4 @@
     </script>
   </body>
 </html>
+
