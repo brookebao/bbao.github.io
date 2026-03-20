@@ -185,20 +185,36 @@
         was used to evaluate stress, displacement, and likely failure regions.
       </p>
 
-      <div class="image-grid three-up">
+      <div class="image-grid">
         <figure>
           <img src="/images/engs33-bridge-project/sap2000_heightcomparison.png" alt="SAP2000 model" />
-          <figcaption>SAP2000 truss model used to evaluate design variations.</figcaption>
+          <figcaption>Phase 2: SAP2000 truss model used to evaluate design variations.</figcaption>
+          <img
+            class="secondary-sap-image"
+            src="/images/engs33-bridge-project/sap2000_final.png"
+            alt="Final SAP model"
+          />
+          <p class="secondary-sap-caption">Final SAP model.</p>
         </figure>
         <figure>
-          <img src="/images/engs33-bridge-project/solidworks_comparisons.png" alt="Stress plot" />
-          <figcaption>SolidWorks variations with different wood widths and truss configurations. Comparisons were undertaken
+          <img src="/images/engs33-bridge-project/solidworks_comparisons.png" alt="Solidworks comparison" />
+          <figcaption>Phase 3: SolidWorks variations with different wood widths and truss configurations. Comparisons were undertaken
                       with stress and deflection plots (not shown). Top: Variation made by Brooke. Bottom: Variation made by Ryan Stern.</figcaption>
         </figure>
-        <figure>
-          <img src="/images/displacement-plot.png" alt="Deflection plot" />
-          <figcaption>Deflection plot showing expected deformation under load.</figcaption>
-        </figure>
+        <div class="variation-tables-column">
+          <figure>
+            <img
+              class="pre-table-image"
+              src="/images/engs33-bridge-project/sap2000_variationtable_phase2.png"
+              alt="SAP2000 variation table"
+            />
+            <figcaption>Phase 2: Results from stress and deflection analysis for different SAP2000 variations used to inform Phase 3 SolidWorks.</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/engs33-bridge-project/solidworks_variationtable_phase3.png" alt="Variation Table" />
+            <figcaption>Phase 3: Results from stress and deflection analysis for three different SolidWorks variations.</figcaption>
+          </figure>
+        </div>
       </div>
 
       <div class="analysis-callout-grid">
@@ -210,9 +226,10 @@
           <h4>What was optimized</h4>
           <p>Lower stress concentration, lower deflection, and better performance per unit mass.</p>
         </div>
-        <div class="mini-card">
+        <div class="mini-card decision-card">
           <h4>Decision point</h4>
-          <p>The final configuration was selected based on predicted stiffness, strength, and constructability.</p>
+          <p> From the SAP 2000 2D analysis (Phase 2), to optimize these variables, a height of 130 mm, 5 different arches, and a k-truss configuration was chosen.</p>
+          <p> From the Solidworks FEA analysis (Phase 3), a thinner deck, 0.5 kg mass, 6 mm crossmember x 7, k-truss configuration among other changes was maintained for the final bridge design.</p>
         </div>
       </div>
     </section>
