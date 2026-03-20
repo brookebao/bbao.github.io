@@ -1,37 +1,153 @@
-.arrow-right {
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid black; /* Adjust size and color */
-    display: inline-block;
-    margin-left: 10px;
+.flow-arrow {
+  --arrow-color: #4a2a1d;
+  --arrow-line: 3px;
+  --arrow-head: 12px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 48px;
+  pointer-events: none;
 }
 
-.arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 15px solid black; /* Adjust size and color */
-    display: block;
-    margin: 10px auto;
+.flow-arrow::before,
+.flow-arrow::after {
+  content: "";
+  position: absolute;
 }
 
-.arrow-left {
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 15px solid black; /* Adjust size and color */
-    display: inline-block;
-    margin-right: 10px;
+.flow-arrow--right::before {
+  top: 50%;
+  left: 8%;
+  right: 18%;
+  height: var(--arrow-line);
+  background: var(--arrow-color);
+  transform: translateY(-50%);
 }
 
-.arrow-vertical-line {
-    width: 2px;
-    height: 50px; /* Adjust height as needed */
-    background-color: black;
-    display: block;
-    margin: 10px auto;
+.flow-arrow--right::after {
+  top: 50%;
+  right: 6%;
+  border-top: var(--arrow-head) solid transparent;
+  border-bottom: var(--arrow-head) solid transparent;
+  border-left: calc(var(--arrow-head) * 1.1) solid var(--arrow-color);
+  transform: translateY(-50%);
+}
+
+.flow-arrow--compact::before {
+  left: 4%;
+  right: 10%;
+}
+
+.flow-arrow--compact::after {
+  right: 0;
+}
+
+.flow-arrow--down::before,
+.flow-arrow--short-down::before {
+  top: 6%;
+  left: 50%;
+  width: var(--arrow-line);
+  background: var(--arrow-color);
+  transform: translateX(-50%);
+}
+
+.flow-arrow--down::after,
+.flow-arrow--short-down::after {
+  left: 50%;
+  bottom: 0;
+  border-left: var(--arrow-head) solid transparent;
+  border-right: var(--arrow-head) solid transparent;
+  border-top: calc(var(--arrow-head) * 1.15) solid var(--arrow-color);
+  transform: translateX(-50%);
+}
+
+.flow-arrow--down::before {
+  bottom: 18px;
+}
+
+.flow-arrow--short-down::before {
+  bottom: 14px;
+}
+
+.flow-arrow--elbow-down::before {
+  top: 42%;
+  left: 8%;
+  width: 42%;
+  height: var(--arrow-line);
+  background: var(--arrow-color);
+}
+
+.flow-arrow--elbow-down {
+  overflow: visible;
+  background:
+    linear-gradient(var(--arrow-color), var(--arrow-color)) calc(50% - (var(--arrow-line) / 2)) calc(100% - 18px) / var(--arrow-line) calc(100% - 42%) no-repeat;
+}
+
+.flow-arrow--elbow-down::after {
+  top: auto;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: var(--arrow-head) solid transparent;
+  border-right: var(--arrow-head) solid transparent;
+  border-top: calc(var(--arrow-head) * 1.15) solid var(--arrow-color);
+  background: none;
+  transform: translateX(-50%);
+}
+
+.flow-arrow--elbow-left::before {
+  top: 6%;
+  left: 50%;
+  bottom: 18px;
+  width: var(--arrow-line);
+  background: var(--arrow-color);
+  transform: translateX(-50%);
+}
+
+.flow-arrow--elbow-left {
+  overflow: visible;
+  background:
+    linear-gradient(var(--arrow-color), var(--arrow-color)) 12px calc(100% - 8px) / calc(56% - 12px) var(--arrow-line) no-repeat;
+}
+
+.flow-arrow--elbow-left::after {
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-top: var(--arrow-head) solid transparent;
+  border-bottom: var(--arrow-head) solid transparent;
+  border-right: calc(var(--arrow-head) * 1.1) solid var(--arrow-color);
+  background: none;
+}
+
+.flow-arrow--long-left::before {
+  top: 4%;
+  left: 50%;
+  bottom: 18px;
+  width: var(--arrow-line);
+  background: var(--arrow-color);
+  transform: translateX(-50%);
+}
+
+.flow-arrow--long-left::after {
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-top: var(--arrow-head) solid transparent;
+  border-bottom: var(--arrow-head) solid transparent;
+  border-right: calc(var(--arrow-head) * 1.1) solid var(--arrow-color);
+}
+
+.flow-arrow--long-left {
+  background:
+    linear-gradient(var(--arrow-color), var(--arrow-color)) 12px calc(100% - 2px) / calc(50% - 12px) var(--arrow-line) no-repeat;
+}
+
+@media screen and (max-width: 991px) {
+  .flow-arrow {
+    display: none;
+  }
 }
