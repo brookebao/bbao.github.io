@@ -457,6 +457,14 @@ body.lightbox-open {
   border-radius: 8px;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
 }
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: purple;
+}
 
 @media (max-width: 900px) {
   .bridge-hero-grid {
