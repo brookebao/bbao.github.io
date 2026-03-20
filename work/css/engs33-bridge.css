@@ -225,8 +225,13 @@ figcaption {
 }
 
 .testing-setup-image {
-  max-width: 400px;
+  max-width: 360px;
   margin: 0 auto;
+}
+
+.results-table-image {
+  width: 92%;
+  margin: 18px auto;
 }
 
 .experiment-media figcaption {
@@ -431,6 +436,39 @@ figcaption {
   box-shadow: 0 0 0 1px rgba(0,0,0,0.06);
 }
 
+.takeaway-box {
+  margin-top: 16px;
+}
+
+.takeaway-box ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.takeaway-box li {
+  margin: 2px 0;
+  line-height: 1.2;
+}
+
+.performance-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.performance-note {
+  margin: 0;
+}
+
+.performance-note img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
+}
+
 .final-results-preview p {
   margin-top: 0;
 }
@@ -462,8 +500,8 @@ figcaption {
 
 .final-photo-1,
 .final-photo-2 {
-  height: 220px;
-  object-fit: cover;
+  height: auto;
+  object-fit: initial;
 }
 
 .final-photo-3-wrap {
@@ -481,6 +519,16 @@ figcaption {
 .prediction-title {
   margin-top: 18px;
   margin-bottom: 10px;
+}
+
+.prediction-bullets {
+  margin: 0 0 14px;
+  padding-left: 20px;
+}
+
+.prediction-bullets li {
+  margin: 2px 0;
+  line-height: 1.2;
 }
 
 .prediction-layout {
@@ -628,6 +676,9 @@ a:visited {
   }
   .results-metrics {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .performance-layout {
+    grid-template-columns: 1fr;
   }
   .failure-point-layout {
     grid-template-columns: 1fr;

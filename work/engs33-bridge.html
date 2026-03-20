@@ -166,12 +166,12 @@
         </figure>
       </div>
 
-      <div class="note-box">
+      <!-- <div class="note-box">
         <strong>Design direction:</strong>
         Rather than directly copying a standard Warren, Howe, or Pratt bridge,
         the final concept combined ideas from precedent research, group sketches,
         and practical build constraints.
-      </div>
+      </div> -->
     </section>
 
     <!-- DESIGN & ANALYSIS -->
@@ -267,26 +267,13 @@
           </figure>
         </div>
 
-        <p class="prediction-title"><strong>Prediction</strong></p>
+        <p class="prediction-title"><strong>Things that we made predictions of:</strong></p>
+        <ol class="prediction-bullets">
+          <li>Load at failure</li>
+          <li>Total deflection between a load of 0.5 - 1 Newtons</li>
+          <li>Point on bridge of first failure (cracking, buckling, etc.)</li>
+        </ol>
 
-        <div class="prediction-layout">
-          <figure class="prediction-figure">
-            <img src="/images/engs33-bridge-project/finalbridge/graphs/prediction_failurepoint_image.png" alt="Prediction failure, image" />
-          </figure>
-          <figure class="prediction-figure">
-            <img src="/images/engs33-bridge-project/finalbridge/graphs/prediction_failurepoint_vonmises.png" alt="Prediction failure, von mises" />
-          </figure>
-          <div class="prediction-metrics">
-            <div class="metric-card">
-              <div class="metric-label">Max Force Withstand</div>
-              <div class="metric-value">XXX N</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">Max Deflection</div>
-              <div class="metric-value">X.XX mm</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -300,18 +287,10 @@
             <strong>Test setup</strong>
             <p>
               The bridge was tested under a centered loading configuration using the
-              Instron, with failure load and midspan deflection compared against predictions.
+              Instron. A increasing load is applied over time, with measurements being taken 
+              of force being applied and the deflection at that time. Loading is stopped when first
+              failure point occurs (usually marked with a cracking sound).
             </p>
-          </div>
-
-          <div class="experiment-block">
-            <strong>What we tracked</strong>
-            <ul>
-              <li>Deflection under load</li>
-              <li>Maximum load before failure</li>
-              <li>Failure location and failure mode</li>
-              <li>Predicted vs actual behavior</li>
-            </ul>
           </div>
         </div>
 
@@ -319,11 +298,6 @@
           <figure class="experiment-media">
             <img class="testing-setup-image" src="/images/engs33-bridge-project/testingsetup.jpg" alt="Bridge testing setup" />
             <figcaption>Instron load testing setup.</figcaption>
-          </figure>
-
-          <figure class="experiment-media">
-            <img src="/images/engs33-bridge-project/results/bridgeaftertesting.png" alt="Bridge after failure" />
-            <figcaption>Bridge after testing, showing observed failure location.</figcaption>
           </figure>
         </div>
       </div>
@@ -344,9 +318,15 @@
         </div>
 
         <div class="summary-group">
-          <div class="plot-wrapper">
-            <img class="full-width-image" src="/images/engs33-bridge-project/results/resultstable.png" alt="Load deflection curve" />
-            <figcaption>Load-deflection response comparing modeled and tested performance.</figcaption>
+          <div class="performance-layout">
+            <div class="plot-wrapper">
+              <img class="full-width-image results-table-image" src="/images/engs33-bridge-project/results/resultstable.png" alt="Load deflection curve" />
+              <figcaption>Comparison of Solidworks predicted vs. actual maximum load and deflection.</figcaption>
+            </div>
+            <figure class="performance-note">
+              <img src="/images/engs33-bridge-project/results/bridgeaftertesting.png" alt="Bridge after testing" />
+              <figcaption>Bridge after testing looking pretty intact except for small crack (see below for close up).</figcaption>
+            </figure>
           </div>
         </div>
 
@@ -360,28 +340,42 @@
               </figure>
               <figure>
                 <img src="/images/engs33-bridge-project/finalbridge/graphs/prediction_failurepoint_vonmises.png" alt="Predicted failure point von Mises plot" />
-                <figcaption>Predicted failure region (von Mises).</figcaption>
+                <figcaption>Point of highest stress is purple --- our predicted failure member at our predicted max. load (von Mises).</figcaption>
               </figure>
             </div>
             <figure class="failure-point-main">
               <img src="/images/engs33-bridge-project/results/actual_failurepoint.png" alt="Observed failure point on bridge" />
-              <figcaption>Observed failure point after physical load testing.</figcaption>
+              <figcaption>Observed failure point after physical load testing. Same exact member!!</figcaption>
             </figure>
           </div>
         </div>
 
-        <div class="note-box">
-          <strong>Takeaway:</strong>
-          The largest differences between predicted and actual performance likely
-          came from connection behavior, material imperfections, and fabrication tolerances.
+      </div>
+
+      <div class="results-box takeaway-box">
+        <div class="results-intro">
+          <h3>Sources of Error/Discussion</h3>
+          <p>
+            We predicted the correct member that would fail first! However, our max. load and deflection were both more conservative than the actual observed behavior.
+          </p>
+          <ul>
+            <li>
+              Why was our analyses not super accurate?
+              <ul>
+                <li>Bridge may not have been flush with the Instron set up -- sanding support areas for better fit.</li>
+                <li>We were pretty conservative with identifying the moment of failure (and with that the maximum stress) in the von mises plot, could have been less conservative which would lead to larger maximum load like predicted</li>
+              </ul>
+            </li>
+            <li>
+              If we had to try again...
+              <ul>
+                <li>Test various fillet radii (bridge most likely failed there becuase the fillet radii made all those members very thing).</li>
+                <li>Our bridge was heavier than a lot of other bridges which could contribute to greater stress felt! Greater consideration of bridge mass vs. other features of design.</li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
-
-    <!-- DELIVERABLES -->
-    <section class="project-section" id="deliverables">
-      <div class="position-name-text">Sources of Error/Discussion</div>
-
     </section>
 
     <div class="footer-wrap">
