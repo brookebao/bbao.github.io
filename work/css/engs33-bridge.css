@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+:root {
+  --content-zoom: 0.92;
+}
+
 /* images */
 .hero-image img {
   width: 100%;
@@ -32,6 +36,7 @@
   max-width: 1080px;
   margin: 22px auto;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
+  zoom: var(--content-zoom);
 }
 
 .position-name-text {
@@ -650,6 +655,9 @@ body.lightbox-open {
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
 }
 @media (max-width: 900px) {
+  .project-section {
+    zoom: 1;
+  }
   .bridge-hero-grid {
     grid-template-columns: 1fr;
   }
