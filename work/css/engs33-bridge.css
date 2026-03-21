@@ -699,3 +699,19 @@ body.lightbox-open {
     margin: 16px auto;
   }
 }
+
+@media (max-width: 560px) {
+  .final-bridge-grid,
+  .results-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .section-nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .lightbox-overlay {
+    padding: 16px;
+  }
+}

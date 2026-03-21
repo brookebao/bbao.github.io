@@ -1,6 +1,7 @@
 .container-6 {
   position: relative;
   min-height: clamp(320px, 36vw, 470px);
+  margin-top: -12px;
 }
 
 .quick-stack-3 {
@@ -27,7 +28,36 @@
 }
 
 .container-9 {
-  margin-top: clamp(24px, 4vw, 56px);
+  margin-top: 4px;
+}
+
+.intro-heading-block {
+  float: left;
+  width: clamp(340px, 38vw, 460px);
+  margin: 0 28px 16px 0;
+}
+
+.intro-heading-block .heading-jumbo,
+.intro-heading-block .paragraph-light {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.intro-heading-block .heading-jumbo {
+  white-space: nowrap;
+}
+
+.container-9 .paragraph {
+  margin-top: 14px;
+}
+
+.intro-followup {
+  clear: both;
+}
+
+.intro-followup a {
+  white-space: nowrap;
+  display: inline;
 }
 
 @media screen and (max-width: 767px) {
@@ -39,6 +69,16 @@
   .div-block-19 {
     left: 20px;
     width: clamp(150px, 30vw, 220px);
+  }
+
+  .intro-heading-block {
+    float: none;
+    width: auto;
+    margin-right: 0;
+  }
+
+  .intro-followup {
+    clear: none;
   }
 }
 

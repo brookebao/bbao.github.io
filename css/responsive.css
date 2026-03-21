@@ -1,0 +1,171 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img,
+video,
+iframe,
+embed,
+object,
+svg {
+  max-width: 100%;
+}
+
+img,
+video,
+svg {
+  height: auto;
+}
+
+iframe,
+embed,
+object {
+  display: block;
+  width: 100%;
+}
+
+.footer-wrap {
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 991px) {
+  .div-block-30,
+  .div-block-39 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100% - 32px, 980px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .div-block-39 {
+    gap: 24px;
+  }
+
+  .div-block-28,
+  .about-head-text-wrap {
+    width: 100%;
+    max-width: 700px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .image-23 {
+    width: min(100%, 320px);
+    height: auto;
+  }
+
+  .div-block-24 {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .div-block-26 {
+    width: calc(50% - 12px);
+    min-width: 180px;
+    text-align: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  }
+
+  .gallery-wrapper-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .gallery-block-2,
+  .div-block-37 {
+    width: 100%;
+    height: auto;
+  }
+
+  .div-block-22 {
+    width: min(100% - 32px, 960px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container-6,
+  .quick-stack-3 {
+    min-height: auto;
+  }
+
+  .div-block-19 {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: -70px auto 0;
+  }
+
+  .intro-heading-block {
+    width: auto;
+    float: none;
+    margin: 0 0 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .div-block-24 {
+    justify-content: stretch;
+  }
+
+  .div-block-26 {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .project-section {
+    width: auto !important;
+    margin: 16px 12px !important;
+    padding: 20px 18px !important;
+  }
+
+  .bridge-hero {
+    width: auto !important;
+    padding: 0 12px !important;
+  }
+
+  .project-overview-grid,
+  .comparison-grid,
+  .project-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .div-block-19 {
+    width: min(70vw, 240px);
+  }
+
+  .container-9 .paragraph,
+  .intro-followup a {
+    overflow-wrap: anywhere;
+  }
+
+  object[type="application/pdf"] {
+    height: min(75vh, 480px);
+  }
+}
