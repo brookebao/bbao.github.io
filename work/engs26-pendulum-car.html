@@ -54,16 +54,27 @@
 
 <!-- HERO -->
 <div class="div-block-22 project-hero">
-  <h2 class="heading-jumbo">
-    Feedback-Controlled Inverted Pendulum Car
-  </h2>
+  <div class="pendulum-hero-grid">
+    <div class="pendulum-hero-copy">
+      <h2 class="heading-jumbo">
+        Feedback-Controlled Inverted Pendulum Car
+      </h2>
 
-  <h6 class="heading-4">
-    ENGS 26: Control Theory · Final Project
-  </h6>
+      <h6 class="heading-4">
+        ENGS 26: Control Theory - Final Project
+      </h6>
 
-  <div class="text-block-5">
-    System Modeling · PID Control · MATLAB · Hardware Validation
+      <div class="text-block-5">
+        System Modeling - PID Control - MATLAB - Hardware Validation
+      </div>
+    </div>
+
+    <div class="pendulum-hero-image">
+      <img
+        src="/images/engs26-pendulum-car/pendulumcar_full.jpg"
+        alt="Feedback-controlled inverted pendulum car setup"
+      />
+    </div>
   </div>
 
   <div class="section-nav">
@@ -80,91 +91,151 @@
 <!-- OVERVIEW -->
 <div class="project-section" id="overview">
   <div class="position-name-text">Project Overview</div>
-  <p>
-    This project aimed to design and implement a closed-loop feedback controller
-    capable of stabilizing an inverted pendulum mounted on a motor-driven cart.
-    The inverted pendulum is an inherently unstable system, requiring active
-    control to maintain equilibrium.
-  </p>
-  <p>
-    Using first-principles modeling, experimental system identification, and
-    frequency-domain control design, we developed and tuned a PID-based
-    compensator that successfully stabilizes the pendulum under real-world
-    disturbances.
-  </p>
+  <ul>
+          <li>
+            <strong>Goals:</strong> Keep the inverted pendulum (a stick) upright by moving the car (in response to where the stick is)!
+            In more technical terms, design and implement a closed-loop feedback controller that can stabilize
+            an intverted pendulum mounted on a motor-driven cart.
+          </li>
+          <li>
+            <strong>Software:</strong> MATLAB (Control Systems Toolbox, sisotool), data analysis tools.
+          </li>
+          <li>
+            <strong>Skills:</strong> System modeling, control systems (PID design, root locus, Bode analysis), circuit design (RC implementation), experimental testing and system identification, iterative tuning.
+          </li>
+        </ul>
 </div>
 
 <!-- SYSTEM MODELING -->
 <div class="project-section" id="modeling">
   <div class="position-name-text">System Modeling</div>
-  <p>
-    The system was modeled as a feedback loop consisting of a compensator, motor,
-    drivetrain, cart–pendulum dynamics, and angular position sensor. Equations of
-    motion for the cart–pendulum system were derived from Newtonian mechanics and
-    linearized about the upright equilibrium.
-  </p>
-  <p>
-    These equations were transformed into the Laplace domain to obtain the plant
-    transfer function relating motor voltage input to pendulum angle output.
-  </p>
-</div>
+  <div class="modeling-layout">
+    <div class="modeling-copy">
+      <p>
+        The system was modeled as a feedback loop consisting of a compensator, motor,
+        drivetrain, cart-pendulum dynamics, and angular position sensor. Equations of
+        motion for the cart-pendulum system were derived from Newtonian mechanics and
+        linearized about the upright equilibrium.
+      </p>
+      <p>
+        These equations were transformed into the Laplace domain to obtain the plant
+        transfer function relating motor voltage input to pendulum angle output.
+      </p>
+    </div>
 
-<!-- MEASUREMENTS -->
-<div class="project-section" id="measurements">
-  <div class="position-name-text">Experimental Measurements</div>
-  <ul>
-    <li>Motor electrical response modeled as a first-order system</li>
-    <li>Motor torque constant extracted from manufacturer data</li>
-    <li>Gear ratio determined by tooth counting</li>
-    <li>Wheel radius measured to relate torque to force</li>
-    <li>Sensor voltage-to-angle calibration performed experimentally</li>
-  </ul>
-</div>
+    <div class="modeling-photo-grid">
+      <figure class="modeling-photo-slot">
+        <img
+          src="/images/engs26-pendulum-car/closedloopdiagram.png"
+          alt="Closed-loop block diagram for the pendulum car system"
+        />
+      </figure>
+      <figure class="modeling-photo-slot">
+        <img
+          src="/images/engs26-pendulum-car/OpenLoopBlockDiagram.png"
+          alt="Open-loop block diagram for the pendulum car system"
+        />
+      </figure>
+    </div>
+  </div>
 
-<!-- CONTROL DESIGN -->
-<div class="project-section" id="control">
-  <div class="position-name-text">Control Design & Specifications</div>
-  <ul>
-    <li>Damping ratio &gt; 0.5</li>
-    <li>Rise time &lt; 0.5 s</li>
-    <li>Settling time &lt; 1.0 s</li>
-    <li>Overshoot &lt; 10%</li>
-    <li>Zero steady-state error</li>
-    <li>Minimum phase margin of 30°</li>
-    <li>Gain margin &gt; 6 dB (target)</li>
-  </ul>
-  <p>
-    A PID controller was selected due to its ability to balance responsiveness,
-    stability, and steady-state accuracy.
-  </p>
+  <div class="modeling-subsection" id="measurements">
+    <h3 class="modeling-subtitle">Experimental Measurements</h3>
+    <p>
+      Measurements were taken to estimate the transfer function for each block, except the compensator
+      which we must design. This includes the following (see report for more details):
+    </p>
+    <ul>
+      <li>Motor electrical response modeled as a first-order system, motor torque constant extracted from manufacturer data,
+        sensor voltage-to-angle calibration performed experimentally, etc.</li>
+    </ul>
+  </div>
+
+  <div class="modeling-subsection" id="control">
+    <h3 class="modeling-subtitle">Control Design & Specifications</h3>
+    <ul>
+      <li>Damping ratio &gt; 0.5</li>
+      <li>Rise time &lt; 0.5 s</li>
+      <li>Settling time &lt; 1.0 s</li>
+      <li>Overshoot &lt; 10%</li>
+      <li>Zero steady-state error</li>
+      <li>Minimum phase margin of 30 degrees</li>
+      <li>Gain margin &gt; 6 dB (target)</li>
+    </ul>
+    <p>
+      A PID controller was selected due to its ability to balance responsiveness,
+      stability, and steady-state accuracy.
+    </p>
+  </div>
 </div>
 
 <!-- IMPLEMENTATION -->
 <div class="project-section" id="implementation">
   <div class="position-name-text">Controller Implementation</div>
+  <div class="implementation-photo-row">
+    <figure class="implementation-photo-slot">
+      <img
+          src="/images/engs26-pendulum-car/theoretical_compensator_rootlocus.png"
+          alt="Theoretical root locus for compensator"
+        />
+      <figcaption>Theoretical compensator root locus and transfer function.</figcaption>
+    </figure>
+    <figure class="implementation-photo-slot">
+      <img
+          src="/images/engs26-pendulum-car/experimental_compensator_rootlocus.png"
+          alt="Experimental root locus for compensator"
+        />
+      <figcaption>Experimental compensator root locus and transfer function.</figcaption>
+    </figure>
+    <figure class="implementation-photo-slot">
+      <img
+          src="/images/engs26-pendulum-car/theoretical_compensator_equation.png"
+          alt="Experimental root locus for compensator"
+        />
+    </figure>
+    <figure class="implementation-photo-slot">
+      <img
+          src="/images/engs26-pendulum-car/experimental_compensator_equation.png"
+          alt="Theoretical root locus for compensator"
+        />
+    </figure>
+  </div>
   <p>
     An ideal compensator was first designed in MATLAB using SISOTOOL and validated
-    through root locus, Bode, and Nyquist analyses. Component values were then
-    translated into a physical analog circuit using resistors and capacitors.
+    through root locus, Bode, and Nyquist analyses. The transfer function was derived from the graph,
+    and component values were solved for and translated into a physical analog circuit using resistors and capacitors.
   </p>
   <p>
-    Empirical tuning was required to account for non-idealities such as actuator
-    saturation, friction, and unmodeled dynamics.
+    Challenge: the first compensator (we called "theoretical") derived had a slow performnace, response rate, and had a large gain
+    that saturated the power amp of the motor--there were clearly factors like friction and other dynamics we 
+    did not model for. Resistor and capacitor values were adjusted one by one to address each issue.
+    More detailed problems and tuning can be found in the report below.
   </p>
 </div>
 
 <!-- RESULTS -->
 <div class="project-section" id="results">
   <div class="position-name-text">Results & Performance</div>
-  <p>
-    The final controller successfully stabilized the inverted pendulum in
-    hardware. The system demonstrated fast response, minimal overshoot, and
-    robust recovery from disturbances.
-  </p>
-  <p>
-    Frequency-domain analysis confirmed adequate phase margin and closed-loop
-    bandwidth, while time-domain testing validated real-world performance.
-  </p>
+  <div class="results-layout">
+    <div class="results-copy">
+      <p>
+        The final controller successfully stabilized the inverted pendulum in
+        hardware. The system demonstrated fast response, minimal overshoot, and
+        robust recovery from disturbances.
+      </p>
+      <p>
+        Frequency-domain analysis confirmed adequate phase margin and closed-loop
+        bandwidth, while time-domain testing validated real-world performance.
+      </p>
+    </div>
+
+    <figure class="results-video">
+      <video controls playsinline preload="metadata">
+        <source src="/images/engs26-pendulum-car/engs26_carworking_video.mov" type="video/quicktime" />
+        Your browser does not support the project video.
+      </video>
+    </figure>
+  </div>
 </div>
 
 <!-- DELIVERABLES -->
@@ -175,11 +246,6 @@
     <a href="https://drive.google.com/file/d/1nwWHRCuWih1hGScDCCsvK-74fBrkBTv3/view?usp=sharing" target="_blank" class="deliverable-card">
       <img src="/images/engs26/report_thumbnail.png" alt="Report thumbnail">
       <div class="deliverable-label">Final Report (PDF)</div>
-    </a>
-
-    <a href="LINK_TO_PRESENTATION" target="_blank" class="deliverable-card">
-      <img src="/images/engs26/slides_thumbnail.png" alt="Slides thumbnail">
-      <div class="deliverable-label">Presentation Slides</div>
     </a>
 
   </div>
