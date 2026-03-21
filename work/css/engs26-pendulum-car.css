@@ -245,6 +245,11 @@ figcaption {
   padding: 0 12px;
 }
 
+.project-hero .heading-jumbo {
+  font-size: clamp(20px, 5vw, 50px);
+  text-align: left;
+}
+
 .pendulum-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
@@ -255,12 +260,21 @@ figcaption {
 
 .pendulum-hero-copy {
   text-align: left;
+  width: 100%;
+}
+
+.pendulum-hero-copy .heading-jumbo,
+.pendulum-hero-copy .heading-4,
+.pendulum-hero-copy .text-block-5 {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .pendulum-hero-image {
   justify-self: center;
   width: 100%;
-  max-width: 240px;
+  max-width: 100px;
 }
 
 .pendulum-hero-image img {
@@ -349,7 +363,7 @@ figcaption {
 
 .results-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
   gap: 24px;
   align-items: start;
 }
@@ -360,6 +374,9 @@ figcaption {
 
 .results-video {
   margin: 0;
+  width: 100%;
+  max-width: 200px;
+  justify-self: center;
 }
 
 .results-video video {
