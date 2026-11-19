@@ -86,3 +86,10 @@ footer a{color:var(--ink3)}
 #home .hero-desc{max-width:410px}
 @media(max-width:1000px){#home{padding:32px;min-height:520px}#home .home-left{max-width:560px;padding:32px}}
 @media(max-width:767px){#home{margin-top:18px;padding:18px 18px 105px;min-height:0;gap:0}#home .home-left{padding:28px 22px;max-width:100%;width:100%}.intro-mosaic{gap:6px}.intro-mosaic-row{gap:5px}}
+
+/* Original front-page portrait, alongside the introduction. */
+#home{grid-template-columns:minmax(0,1.7fr) minmax(180px,.8fr);gap:48px}
+.intro-portrait{width:100%;max-width:270px;justify-self:center;margin:0;padding:16px;background:var(--paper)}
+.intro-portrait img{display:block;width:100%;height:auto}
+@media(max-width:1000px) and (min-width:768px){#home{gap:28px;grid-template-columns:minmax(0,1.7fr) minmax(160px,.8fr)}.intro-portrait{padding:12px}}
+@media(max-width:767px){#home{padding-bottom:24px;gap:24px}.intro-portrait{width:70%;max-width:240px;align-self:flex-end;padding:12px}}
